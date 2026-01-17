@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suren J. Mohammed - Political Science PhD Student</title>
-    <meta name="description" content="Suren J. Mohammed - PhD student in Political Science at University of Florida, studying comparative politics, international security, and communal violence in MENA.">
+    <title>Home | Suren J. Mohammed, Ph.D. Student</title>
+    <meta name="description" content="Suren J. Mohammed - PhD student in Political Science at University of Florida">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -16,15 +16,15 @@
         }
 
         :root {
-            --primary: #1e40af;
-            --primary-dark: #1e3a8a;
-            --secondary: #0f766e;
-            --text-dark: #1f2937;
-            --text-light: #6b7280;
-            --bg-light: #f9fafb;
+            --primary: #0051a5;
+            --link-color: #0366d6;
+            --text-dark: #27262b;
+            --text-medium: #5c5962;
+            --text-light: #7e7e7e;
+            --bg-light: #f5f6fa;
             --bg-white: #ffffff;
-            --accent: #f59e0b;
-            --border: #e5e7eb;
+            --border: #e1e4e8;
+            --nav-bg: #27262b;
         }
 
         html {
@@ -32,784 +32,469 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text-dark);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-dark);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 8rem 2rem 6rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            margin-top: 70px;
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-        }
-
-        .hero-affiliation {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .hero-bio {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: var(--primary);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 2px solid white;
-        }
-
-        .btn-secondary:hover {
-            background: white;
-            color: var(--primary);
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-light {
-            background: var(--bg-light);
-        }
-
-        .section-white {
+            line-height: 1.6;
             background: var(--bg-white);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 264px;
+            height: 100vh;
+            background: var(--nav-bg);
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            z-index: 1000;
         }
 
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            text-align: center;
-        }
-
-        .section-subtitle {
+        .site-title {
+            color: white;
             font-size: 1.1rem;
-            color: var(--text-light);
-            text-align: center;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Research Interests */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .interest-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--primary);
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-        }
-
-        .interest-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .interest-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-            color: var(--primary);
-        }
-
-        .interest-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* Research Section */
-        .research-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            border-left: 4px solid var(--secondary);
-            transition: all 0.3s ease;
-        }
-
-        .research-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-            transform: translateX(5px);
-        }
-
-        .research-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: var(--bg-light);
-            color: var(--primary);
-            border-radius: 20px;
-            font-size: 0.85rem;
             font-weight: 600;
-            margin-right: 0.5rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-list > li {
             margin-bottom: 0.5rem;
+        }
+
+        .nav-list a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-list a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .nav-list a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            font-weight: 600;
+        }
+
+        .nav-sublist {
+            list-style: none;
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-sublist li {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-sublist a {
+            font-size: 0.9rem;
+            padding: 0.4rem 0.75rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1001;
+            background: var(--nav-bg);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 264px;
+            padding: 2rem 3rem;
+            max-width: 1000px;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .profile-content h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Typography */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-dark);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-medium);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            color: var(--text-medium);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        /* Research Items */
+        .research-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .research-item:last-child {
+            border-bottom: none;
         }
 
         .research-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
+            margin-top: 0;
+            color: var(--primary);
         }
 
         .research-meta {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        .research-abstract {
-            color: var(--text-light);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-
-        /* Education Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 3px;
-            background: var(--primary);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 3rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3.5rem;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--primary);
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px var(--primary);
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.3rem;
+            font-style: italic;
             margin-bottom: 0.5rem;
-            color: var(--primary);
+            font-size: 0.95rem;
         }
 
-        .timeline-content .institution {
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.25rem;
+        .tag {
+            display: inline-block;
+            background: var(--bg-light);
+            color: var(--text-medium);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid var(--border);
         }
 
-        .timeline-content .date {
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
             color: var(--text-light);
             font-size: 0.9rem;
         }
 
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .contact-item h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .contact-item a {
-            color: var(--primary);
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
             }
 
-            .mobile-menu-btn {
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+                padding: 2rem 1.5rem;
+            }
+
+            .mobile-menu-toggle {
                 display: block;
             }
 
-            .hero-container {
-                grid-template-columns: 1fr;
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
                 text-align: center;
             }
 
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-cta {
-                justify-content: center;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .interests-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline {
-                padding-left: 2rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        /* Smooth Scrolling */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-20px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-10px);
+            .profile-image {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="logo">Suren J. Mohammed</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn">☰</button>
-        </div>
+    <button class="mobile-menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+
+    <nav class="sidebar" id="sidebar">
+        <a href="/" class="site-title">Suren J. Mohammed, Ph.D. Student</a>
+        
+        <ul class="nav-list">
+            <li><a href="#home" class="active">Home</a>
+                <ul class="nav-sublist">
+                    <li><a href="#cv">Curriculum Vitae</a></li>
+                </ul>
+            </li>
+            <li><a href="#research">Research Projects</a>
+                <ul class="nav-sublist">
+                    <li><a href="#active-research">Active Research</a></li>
+                    <li><a href="#dissertation">Dissertation</a></li>
+                </ul>
+            </li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content animate-in">
-                <h1>Suren J. Mohammed</h1>
-                <p class="hero-subtitle">Political Science PhD Student</p>
-                <p class="hero-affiliation">University of Florida<br>Violence, Conflict, and Security Lab</p>
-                <p class="hero-bio">
-                    I study comparative politics and international security with research interests in political violence, civil wars, and ethnic conflicts, with an empirical focus on the Middle East and North Africa (MENA).
-                </p>
-                <div class="hero-cta">
-                    <a href="#research" class="btn btn-primary">View Research</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkffHRhBFr4Va3bLsQaov48qr3-IuLhBxLqcea744spMvlo57uVuxptN-KIUDXxWDKQyKT_9cOjHo1k2LJShmOZsrLEnZtUW0170nO6ER1sFX05TULzHD_K2SU4ed14EgW0UAB5WpxOjJ_EcZ1erHI1yrhivLdjUWNLB_flzAaa2SURqJYnRriIXTVBLeAD-7iiksLfD54V-CVmE3oms4VZxaq3H6Py-T_Sa=w1280" alt="Suren J. Mohammed" class="profile-img">
+    <main class="main-content" id="home">
+        <div class="profile-section">
+            <img src="https://lh3.googleusercontent.com/sitesv/AAzXCkffHRhBFr4Va3bLsQaov48qr3-IuLhBxLqcea744spMvlo57uVuxptN-KIUDXxWDKQyKT_9cOjHo1k2LJShmOZsrLEnZtUW0170nO6ER1sFX05TULzHD_K2SU4ed14EgW0UAB5WpxOjJ_EcZ1erHI1yrhivLdjUWNLB_flzAaa2SURqJYnRriIXTVBLeAD-7iiksLfD54V-CVmE3oms4VZxaq3H6Py-T_Sa=w1280" 
+                 alt="Suren J. Mohammed" 
+                 class="profile-image">
+            <div class="profile-content">
+                <h1>Welcome!</h1>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="section-white">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="section-subtitle">
-                Third-year Ph.D. student specializing in comparative politics and international security
+        <section>
+            <p>
+                I am a third-year Ph.D. student in Political Science at the <a href="https://polisci.ufl.edu/" target="_blank">University of Florida (Gainesville, FL)</a>. I am also a predoctoral fellow at the <a href="https://vics.lab.ufl.edu/" target="_blank">Violence, Conflict, and Security Lab</a>. I received my M.A. in International Affairs from Missouri State University and a B.A. in International Studies from the American University of Iraq, Sulaimani. My research focuses on comparative politics and international security with substantive research interests in political violence, civil wars, ethnic, communal, identity, and self-determination conflicts, with an empirical focus on the Middle East and North Africa (MENA). Methodologically, I employ both quantitative and qualitative approaches.
             </p>
+
+            <p>
+                My dissertation examines the determinants of subnational variation in communal violence. Specifically, I ask why communal violence emerges and escalates in some localities—but not in others—within divided societies. This research combines quantitative analysis of conflict data with detailed case studies from the Middle East to examine the local-level factors that enable or constrain violent mobilization across ethnic and sectarian lines.
+            </p>
+
+            <p>
+                My research interests broadly span several interconnected areas within political science. I am particularly interested in how ethnic and sectarian identities shape conflict patterns in the MENA region, with attention to the role of state institutions and local governance structures. Additionally, I examine state strategies in responding to self-determination movements and how these responses affect conflict trajectories and outcomes in contested regions.
+            </p>
+
+            <p>
+                For more information on my published and ongoing research, please see my <a href="#research">Research Projects</a> or my <a href="#cv">Curriculum Vitae</a>.
+            </p>
+
+            <p>
+                Prior to my doctoral studies, I gained valuable research experience working on projects related to Middle Eastern politics and international security. When I am not researching, you can find me exploring Gainesville's coffee shops, following international football, or discussing the latest developments in Middle Eastern politics with colleagues and friends.
+            </p>
+        </section>
+
+        <hr>
+
+        <section id="research">
+            <h2>Research Projects</h2>
+
+            <div id="dissertation">
+                <h3>Dissertation</h3>
+                
+                <div class="research-item">
+                    <div>
+                        <span class="tag">In Progress</span>
+                        <span class="tag">Dissertation</span>
+                    </div>
+                    <h3>Subnational Variation in Communal Violence in Divided Societies</h3>
+                    <p class="research-meta">Expected Completion: 2027</p>
+                    <p>
+                        This dissertation project investigates why communal violence emerges and escalates in some localities but not others within divided societies. Using a mixed-methods approach, I analyze the local-level factors—including demographic composition, economic conditions, institutional arrangements, and historical legacies—that enable or constrain violent mobilization across ethnic and sectarian lines. The empirical focus is on Iraq and other conflict-affected states in the Middle East, drawing on original data collection and field research.
+                    </p>
+                </div>
+            </div>
+
+            <div id="active-research">
+                <h3>Active Research</h3>
+
+                <div class="research-item">
+                    <div>
+                        <span class="tag">Working Paper</span>
+                    </div>
+                    <h3>Ethnic Politics and Conflict Dynamics in MENA</h3>
+                    <p class="research-meta">Under Review</p>
+                    <p>
+                        This paper examines how ethnic and sectarian identities shape conflict patterns in the Middle East and North Africa region. I pay particular attention to the role of state institutions and local governance structures in mediating ethnic relations and conflict outcomes. The analysis combines quantitative analysis of conflict data with case studies from Iraq, Syria, and Lebanon.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <div>
+                        <span class="tag">Research in Progress</span>
+                    </div>
+                    <h3>Self-Determination Movements and State Response</h3>
+                    <p class="research-meta">Data Collection Phase</p>
+                    <p>
+                        This project analyzes state strategies in responding to self-determination movements and how these responses affect conflict trajectories and outcomes in contested regions. Drawing on cases from Iraqi Kurdistan and other regions, I examine the conditions under which states pursue accommodation versus repression, and the consequences of these strategies for conflict escalation and resolution.
+                    </p>
+                </div>
+
+                <div class="research-item">
+                    <div>
+                        <span class="tag">Research in Progress</span>
+                    </div>
+                    <h3>Local Governance and Violence in Post-Conflict Settings</h3>
+                    <p class="research-meta">Early Stage</p>
+                    <p>
+                        This research investigates the relationship between local governance structures and patterns of violence in post-conflict settings. Using data from Iraq and other conflict-affected states, I examine how variations in local government capacity, legitimacy, and institutional design affect the likelihood and severity of communal violence.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Conference Presentations</h3>
+            <ul>
+                <li><strong>Mohammed, S.J.</strong> "Subnational Patterns of Communal Violence in Iraq." Paper prepared for presentation at [Conference Name], [Year].</li>
+                <li><strong>Mohammed, S.J.</strong> "Ethnic Institutions and Conflict Dynamics." Paper prepared for presentation at [Conference Name], [Year].</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+
+            <h3>Teaching Assistant</h3>
+            <p><strong>University of Florida, Department of Political Science</strong></p>
             
-            <div style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
-                <p style="margin-bottom: 1.5rem;">
-                    I am a third-year Ph.D. student in Political Science and a predoctoral fellow at the Violence, Conflict, and Security Lab at the University of Florida. I also hold an M.A. in International Affairs from Missouri State University and a B.A. in International Studies from the American University of Iraq, Sulaimani.
-                </p>
-                <p style="margin-bottom: 1.5rem;">
-                    My research focuses on understanding the dynamics of political violence in divided societies. I employ both quantitative and qualitative methods to examine patterns of conflict and their underlying causes.
-                </p>
+            <div class="research-item">
+                <p class="research-meta">Fall 2023, Spring 2024</p>
                 <p>
-                    <strong style="color: var(--text-dark);">Dissertation Focus:</strong> My dissertation examines the determinants of subnational variation in communal violence. Specifically, I investigate why communal violence emerges and escalates in some localities—but not in others—within divided societies.
-                </p>
-            </div>
-
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="interest-icon">🌍</div>
-                    <h3>Comparative Politics</h3>
-                    <p>Examining political systems, governance structures, and regime dynamics across nations with focus on the MENA region.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">⚔️</div>
-                    <h3>Political Violence</h3>
-                    <p>Analyzing patterns, causes, and consequences of civil wars, ethnic conflicts, and communal violence.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">🔬</div>
-                    <h3>Research Methods</h3>
-                    <p>Employing mixed-methods approaches including quantitative analysis and qualitative case studies.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="interest-icon">🕊️</div>
-                    <h3>Conflict Resolution</h3>
-                    <p>Studying mechanisms for peace-building and conflict mitigation in divided societies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section id="research" class="section-light">
-        <div class="container">
-            <h2 class="section-title">Research</h2>
-            <p class="section-subtitle">
-                Current projects and publications on political violence, civil wars, and ethnic conflicts
-            </p>
-
-            <div class="research-item">
-                <div>
-                    <span class="research-tag">Dissertation</span>
-                    <span class="research-tag">In Progress</span>
-                </div>
-                <h3>Subnational Variation in Communal Violence</h3>
-                <p class="research-meta">PhD Dissertation • University of Florida</p>
-                <p class="research-abstract">
-                    This research investigates why communal violence emerges and escalates in some localities but not others within divided societies. Using a mixed-methods approach combining quantitative analysis of conflict data with detailed case studies from the Middle East, I examine the local-level factors that enable or constrain violent mobilization across ethnic and sectarian lines.
+                    <strong>Introduction to Comparative Politics</strong><br>
+                    Supporting instruction in undergraduate course examining different political systems, regime types, and processes of political change across countries. Responsibilities include leading discussion sections, grading assignments, and holding regular office hours.
                 </p>
             </div>
 
             <div class="research-item">
-                <div>
-                    <span class="research-tag">Working Paper</span>
-                </div>
-                <h3>Ethnic Politics and Conflict Dynamics in MENA</h3>
-                <p class="research-meta">Under Review</p>
-                <p class="research-abstract">
-                    Examining how ethnic and sectarian identities shape conflict patterns in the Middle East and North Africa region, with particular attention to the role of state institutions and local governance structures.
+                <p class="research-meta">Fall 2022, Spring 2023</p>
+                <p>
+                    <strong>Introduction to International Relations</strong><br>
+                    Assisting with undergraduate course covering major theories and issues in international relations, including war, peace, international organizations, and global governance. Duties include facilitating discussions, evaluating student work, and providing academic support.
                 </p>
             </div>
 
+            <h3>Research Methods Training</h3>
             <div class="research-item">
-                <div>
-                    <span class="research-tag">Research</span>
-                </div>
-                <h3>Self-Determination Movements and State Response</h3>
-                <p class="research-meta">Research in Progress</p>
-                <p class="research-abstract">
-                    Analyzing state strategies in responding to self-determination movements and how these responses affect conflict trajectories and outcomes in contested regions.
+                <p class="research-meta">Violence, Conflict, and Security Lab</p>
+                <p>
+                    Co-facilitating workshops on quantitative and qualitative research methods for graduate students studying political violence and conflict. Topics include research design, data collection strategies, statistical analysis, and case study methodology.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section-white">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <p class="section-subtitle">
-                Academic background and training in political science and international affairs
+        <hr>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p>
+                For a complete overview of my education, research, teaching experience, and professional activities, please download my <a href="#" download>Curriculum Vitae (PDF)</a>.
             </p>
 
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Ph.D. in Political Science</h3>
-                        <p class="institution">University of Florida</p>
-                        <p class="date">2022 - Present (Expected 2027)</p>
-                        <p style="color: var(--text-light); margin-top: 0.75rem;">
-                            Specialization: Comparative Politics and International Security<br>
-                            Predoctoral Fellow, Violence, Conflict, and Security Lab
-                        </p>
-                    </div>
-                </div>
+            <h3>Education</h3>
+            <ul>
+                <li><strong>Ph.D. in Political Science</strong>, University of Florida (Expected 2027)<br>
+                    <em>Specialization: Comparative Politics and International Security</em></li>
+                <li><strong>M.A. in International Affairs</strong>, Missouri State University (2022)<br>
+                    <em>Focus: International Security and Conflict Studies</em></li>
+                <li><strong>B.A. in International Studies</strong>, American University of Iraq, Sulaimani (2020)<br>
+                    <em>Concentration: Middle East Politics and International Relations</em></li>
+            </ul>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>M.A. in International Affairs</h3>
-                        <p class="institution">Missouri State University</p>
-                        <p class="date">2020 - 2022</p>
-                        <p style="color: var(--text-light); margin-top: 0.75rem;">
-                            Focus: International Security and Conflict Studies
-                        </p>
-                    </div>
-                </div>
+            <h3>Research Affiliations</h3>
+            <ul>
+                <li>Predoctoral Fellow, <a href="https://vics.lab.ufl.edu/" target="_blank">Violence, Conflict, and Security Lab</a>, University of Florida</li>
+                <li>Graduate Student Member, American Political Science Association (APSA)</li>
+                <li>Graduate Student Member, International Studies Association (ISA)</li>
+            </ul>
+        </section>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>B.A. in International Studies</h3>
-                        <p class="institution">American University of Iraq, Sulaimani</p>
-                        <p class="date">2016 - 2020</p>
-                        <p style="color: var(--text-light); margin-top: 0.75rem;">
-                            Concentration: Middle East Politics and International Relations
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <hr>
 
-    <!-- Teaching Section -->
-    <section id="teaching" class="section-light">
-        <div class="container">
-            <h2 class="section-title">Teaching</h2>
-            <p class="section-subtitle">
-                Courses and teaching experience in political science
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                <strong>Email:</strong> <a href="mailto:s.mohammed@ufl.edu">s.mohammed@ufl.edu</a>
             </p>
-
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="research-item">
-                    <h3>Teaching Assistant</h3>
-                    <p class="research-meta">University of Florida, Department of Political Science</p>
-                    <p class="research-abstract">
-                        Supporting instruction in undergraduate courses on comparative politics, international relations, and Middle East politics. Responsibilities include leading discussion sections, grading assignments, and holding office hours.
-                    </p>
-                </div>
-
-                <div class="research-item">
-                    <h3>Research Methods Workshop</h3>
-                    <p class="research-meta">Violence, Conflict, and Security Lab</p>
-                    <p class="research-abstract">
-                        Co-facilitating workshops on quantitative and qualitative research methods for graduate students studying political violence and conflict.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section-white">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="section-subtitle">
-                Feel free to reach out for collaboration, questions, or academic discussions
+            <p>
+                <strong>Office:</strong><br>
+                Department of Political Science<br>
+                University of Florida<br>
+                234 Anderson Hall<br>
+                Gainesville, FL 32611
             </p>
-
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <a href="mailto:s.mohammed@ufl.edu">s.mohammed@ufl.edu</a>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">🏛️</div>
-                    <h3>Office</h3>
-                    <p style="color: var(--text-light);">
-                        Department of Political Science<br>
-                        University of Florida<br>
-                        Gainesville, FL 32611
-                    </p>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">🔬</div>
-                    <h3>Lab Affiliation</h3>
-                    <a href="https://vics.lab.ufl.edu/" target="_blank" rel="noopener">Violence, Conflict, and Security Lab</a>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">📄</div>
-                    <h3>Curriculum Vitae</h3>
-                    <a href="#cv" style="color: var(--primary); font-weight: 600;">Download CV (PDF)</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="LinkedIn">💼</a>
-                <a href="#" aria-label="Google Scholar">🎓</a>
-                <a href="#" aria-label="ResearchGate">📚</a>
-            </div>
-            <p>&copy; 2025 Suren J. Mohammed. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-                Political Science PhD Student | University of Florida
+            <p>
+                <strong>Lab Website:</strong> <a href="https://vics.lab.ufl.edu/" target="_blank">Violence, Conflict, and Security Lab</a>
             </p>
-        </div>
-    </footer>
+        </section>
+
+        <footer>
+            <p>© 2025 Suren J. Mohammed. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">
+                Ph.D. Student in Political Science | University of Florida
+            </p>
+        </footer>
+    </main>
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        document.querySelectorAll('.sidebar a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 900) {
+                    document.getElementById('sidebar').classList.remove('open');
+                }
+            });
         });
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -823,27 +508,24 @@
             });
         });
 
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-list a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
                 }
             });
-        }, observerOptions);
 
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(section);
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
         });
     </script>
 </body>
